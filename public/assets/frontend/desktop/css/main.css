@@ -1074,13 +1074,14 @@ footer ul li a:hover {
 }
 
 .reg-banner {
-  background: url(../img/reg-banner1.png) no-repeat;
-  background-size: cover;
-  min-height: 300px;
+  background: linear-gradient(135deg, #505d7e 0%, #6b7fa8 60%, #ea334b 100%);
+  min-height: 160px;
+  display: flex;
+  align-items: center;
 }
 
 .banner-text {
-  padding: 10rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   width: 70%;
 }
 
@@ -1133,9 +1134,9 @@ footer ul li a:hover {
 }
 
 .log-banner {
-  background: url(../img/log-banner.png) no-repeat;
-  background-size: cover;
-  min-height: 300px;
+  background: linear-gradient(135deg, #505d7e 0%, #6b7fa8 60%, #ea334b 100%);
+  min-height: 0;
+  display: none;
 }
 
 .log .form-check-input {
@@ -1319,7 +1320,7 @@ footer ul li a:hover {
 }
 
 .memb-content {
-  padding: 2rem 1.5rem;
+  padding: 0.75rem 1rem;
   border-right: 1px solid #ccc;
 }
 
@@ -1357,7 +1358,7 @@ footer ul li a:hover {
 .memb-content h4 {
   color: var(--contentColor);
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-family: "work sans";
   padding-bottom: 1rem !important;
   margin: 0;
@@ -1380,7 +1381,7 @@ footer ul li a:hover {
 .memb-content h4 span {
   color: var(--primaryTextColor);
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-family: "work sans";
   line-height: 1.5;
 }
@@ -1415,8 +1416,12 @@ footer ul li a:hover {
 }
 
 .intrest-sec {
-  padding: 5rem 1.5rem;
+  padding: 1rem 0.75rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .intrest-sec p {
@@ -2895,7 +2900,7 @@ footer ul li a:hover {
 }
 
 .list-img {
-  height: 285px;
+  height: 130px;
   overflow: hidden;
   display: block;
 }

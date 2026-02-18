@@ -5,11 +5,7 @@
 
 @section('content')
 
-<div class="log-banner">
-    <div class="container"></div>
-</div>
-
-<div class="container mt-5">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-8 p-4">
             <div class="col-md-12 title2 pt-3 pb-3">
@@ -19,45 +15,37 @@
 
             @if($profiles->count() > 0)
                 @foreach($profiles as $profile)
-                <div class="user-list Parent_Class shadow row mb-5">
-                    <div class="col-md-4 p-2">
+                <div class="user-list Parent_Class shadow row mb-3 align-items-center">
+                    <div class="col-3 col-md-2 p-2">
                         <div class="list-img">
                             @if($profile->photo)
-                                <img src="{{ asset('storage/images/' . $profile->photo) }}" class="img-fluid" alt="{{ $profile->name }}">
+                                <img src="{{ asset('storage/images/' . $profile->photo) }}" class="img-fluid w-100 h-100" style="object-fit:cover;" alt="{{ $profile->name }}">
                             @else
-                                <img src="{{ asset('assets/frontend/img/download.png') }}" class="img-fluid" alt="No photo">
+                                <img src="{{ asset('assets/frontend/img/logo.png') }}" class="img-fluid w-100 h-100" style="object-fit:contain;padding:8px;background:#f5f5f5;" alt="No photo">
                             @endif
                         </div>
                     </div>
-                    <div class="col-md-5 memb-content">
-                        <h4>
-                            <span>{{ ucfirst($profile->gender) }}</span> - {{ $profile->name }}
+                    <div class="col-6 col-md-7 memb-content">
+                        <h4 class="mb-1">
+                            <span>{{ ucfirst($profile->gender) }}</span> — {{ $profile->name }}
                         </h4>
-                        <div class="d-flex justify-content-start flex-wrap gap-2">
+                        <div class="d-flex flex-wrap gap-1 mb-1" style="font-size:1.2rem;color:#555;">
                             @if($profile->dob)
-                                <p>{{ \Carbon\Carbon::parse($profile->dob)->age }} Yrs</p>
+                                <span>{{ \Carbon\Carbon::parse($profile->dob)->age }} Yrs</span>
                             @endif
                             @if($profile->city)
-                                <p> | {{ $profile->city }}</p>
+                                <span>&bull; {{ $profile->city }}</span>
                             @endif
-                        </div>
-                        @foreach($profile->fieldValues as $fv)
-                            @if($fv->value)
-                            <div class="d-flex justify-content-start">
-                                <p><strong>{{ $fv->formField->label }}:</strong> {{ $fv->value }}</p>
-                            </div>
-                            @endif
-                        @endforeach
-                        <div class="d-flex justify-content-start mt-2">
-                            <a href="{{ route('profiles.show', $profile->id) }}" class="btn btn-small">
-                                <i class="far fa-user"></i> View Profile
-                            </a>
+                            @foreach($profile->fieldValues->take(2) as $fv)
+                                @if($fv->value)
+                                <span>&bull; {{ $fv->value }}</span>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
-                    <div class="col-md-3 intrest-sec">
-                        <p class="d-none d-sm-block">Interested in this profile?</p>
-                        <a href="{{ route('profiles.show', $profile->id) }}" class="btn btn-primary">
-                            <i class="far fa-heart"></i> Connect Now
+                    <div class="col-3 col-md-3 intrest-sec">
+                        <a href="{{ route('profiles.show', $profile->id) }}" class="btn btn-primary btn-sm">
+                            <i class="far fa-user"></i> View
                         </a>
                     </div>
                 </div>
