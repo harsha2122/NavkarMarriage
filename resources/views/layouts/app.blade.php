@@ -60,7 +60,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ asset('assets/frontend/desktop/css/toast.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/desktop/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/desktop/css/main.css') }}">
 
     <!-- jQuery (before layout scripts) -->
@@ -81,7 +80,7 @@
     <nav class="navbar navbar-expand-lg bg-white">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fad fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </button>
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('assets/frontend/img/logo.png') }}" class="w-100" alt="India's No. 1 Trusted, Navkar Marriage Bureau.">
