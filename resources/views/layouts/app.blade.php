@@ -26,8 +26,8 @@
 
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
       "name": "Navkar Marriage Bureau",
       "url": "{{ url('/') }}",
       "logo": "{{ asset('assets/frontend/img/logo.png') }}"
