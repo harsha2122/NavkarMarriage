@@ -5,6 +5,15 @@
 
 @section('content')
 
+<div class="reg-banner">
+    <div class="container">
+        <div class="banner-text">
+            <h6>Create Your Free Profile</h6>
+            <p>#NavkarMarriageBureau – Find Your Perfect Jain Life Partner</p>
+        </div>
+    </div>
+</div>
+
 <section>
     <div class="container log">
         <div class="row justify-content-center">
