@@ -487,9 +487,6 @@ footer ul li a:hover {
   padding: 2rem;
   border-radius: 1.5rem;
   border: 1px solid #505d7e4a;
-  margin-top: 0;
-  position: relative;
-  z-index: 9;
 }
 
 .register-form p {

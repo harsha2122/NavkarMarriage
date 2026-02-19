@@ -17,7 +17,8 @@
 <section>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 register-form shadow">
+            <div class="col-md-8">
+            <div class="register-form shadow">
 
                 <div class="row">
                     <div class="col-md-12 title mb-4">
@@ -202,9 +203,10 @@
 
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
+            </div>{{-- /.register-form --}}
+            </div>{{-- /.col-md-8 --}}
+        </div>{{-- /.row --}}
+    </div>{{-- /.container --}}
 </section>
 
 <section>
