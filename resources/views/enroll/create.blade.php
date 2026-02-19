@@ -5,10 +5,6 @@
 
 @section('content')
 
-<div class="log-banner d-none d-sm-block">
-    <div class="container"></div>
-</div>
-
 <section>
     <div class="container log">
         <div class="row justify-content-center">
@@ -118,7 +114,6 @@
                         @if($formFields->count() > 0)
                             <div class="col-md-12">
                                 <hr>
-                                <p class="text-muted small mb-3">Additional details (helps in better matching)</p>
                             </div>
 
                             @foreach($formFields as $field)
